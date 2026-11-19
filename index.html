@@ -32,6 +32,10 @@
     font-size:12px;font-weight:700;letter-spacing:1px;padding:5px 14px;border-radius:999px;margin-bottom:16px}
   .hero h1{font-size:34px;line-height:1.25;margin-bottom:10px;letter-spacing:-.5px}
   .hero .sub{font-size:16px;opacity:.92;max-width:760px}
+  .demo-jump{display:inline-flex;align-items:center;gap:8px;margin-top:20px;background:#fff;color:var(--purple-d);
+    font-size:14px;font-weight:800;padding:11px 22px;border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.16);
+    transition:transform .18s,box-shadow .18s}
+  .demo-jump:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.22)}
   .legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
   .legend span{font-size:11px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);
     padding:4px 10px;border-radius:999px}
@@ -146,6 +150,9 @@
   .map .le{background:#EDE4FF;color:var(--purple)} .map .lx{background:#CCFBF1;color:var(--teal)} .map .lb{background:#FEF3C7;color:var(--amber)}
   .map .m-item .m-n{font-weight:700;display:block} .map .m-item .m-p{color:var(--muted)}
 
+  .demo-fab{position:fixed;right:18px;bottom:18px;z-index:30;background:linear-gradient(135deg,var(--purple),var(--blue));
+    color:#fff;border-radius:999px;padding:11px 18px;font-size:13px;font-weight:800;
+    box-shadow:0 8px 24px rgba(124,58,237,.32)}
   footer{text-align:center;color:var(--muted);font-size:12px;padding:34px 20px 40px}
   @media(max-width:820px){
     .hero{padding:38px 0 32px} .hero h1{font-size:26px}
@@ -166,6 +173,7 @@
     <span class="kicker" id="kicker">AI 产品经理作品集</span>
     <h1 id="title">项目名</h1>
     <p class="sub" id="subtitle">一句话说清项目：谁在什么场景下用，解决什么问题，效果如何</p>
+    <a class="demo-jump" href="https://2013102249.github.io/jiuzhen-ai-pm-portfolio/demo/" target="_blank" rel="noopener">⚡ 打开可点击 Demo →</a>
     <div class="legend">
       <span>证据标注</span>
       <span>[真实] 有数据/日志</span><span>[仿真] 样例集跑分</span>
@@ -183,6 +191,8 @@
   <section id="s4"><div class="sec-head"><div class="sec-no">4</div><div><h2>综合方案图</h2><div class="en">Solution Map</div></div></div><div class="card map" id="map"></div></section>
   <section id="s5"><div class="sec-head"><div class="sec-no">5</div><div><h2>评测方案</h2><div class="en">Evaluation</div></div></div><div id="b5"></div></section>
 </main>
+
+<a class="demo-fab" href="https://2013102249.github.io/jiuzhen-ai-pm-portfolio/demo/" target="_blank" rel="noopener">⚡ 体验 Demo</a>
 
 <footer>AI 产品经理作品集 · 单文件页面，可离线打开 · 证据分级：真实 / 仿真 / 估算 / 假设</footer>
 
@@ -220,7 +230,7 @@ const CONFIG = {
 
   /* ===== 01 项目概览：现有资产盘点 + 四问体检 + 补全路线图 ===== */
   b1: [
-    {type:"callout", text:"可点击 Demo（在线预览）：https://jiuzhen-loan-match.app.workbuddy.host/ ｜ 演示账号 admin / pm / sales / zhou，密码 123456。本页为作品设计与评测文档，Demo 为对应的可交互实现。"},
+    {type:"callout", text:"可点击 Demo（GitHub Pages）：https://2013102249.github.io/jiuzhen-ai-pm-portfolio/demo/ ｜ 页头与右下角均有快捷跳转按钮。演示账号 admin / pm / sales / zhou，密码 123456。本页为作品设计与评测文档，Demo 为对应的可交互实现。"},
     {type:"score", items:[
       {q:"Q1 问题定义", score:"2/2", gap:"目标用户与场景在原 PRD 中明确；本次补齐可观察、可归因的失败场景"},
       {q:"Q2 指标体系", score:"1/2", gap:"原 PRD 只有「匹配成功率」等名称，缺口径、目标值与来源标注；本次补齐三层指标"},
